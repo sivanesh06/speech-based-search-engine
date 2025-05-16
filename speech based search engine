@@ -1,0 +1,64 @@
+
+
+---
+
+### 🧠 **Purpose**
+
+This script is a **voice-activated web search assistant**. It listens to your voice input, converts it into text, and performs a **Google search** based on the recognized command.
+
+---
+
+### ⚙️ **How It Works**
+
+1. **Speech Engine Initialization**
+
+   * Uses `pyttsx3` for text-to-speech to interact with the user.
+   * `speech_recognition` library is used to recognize spoken input from the microphone.
+
+2. **Key Functions**
+
+   * `speak(text)`: Speaks the given text using TTS.
+   * `take_command()`:
+
+     * Prompts user for input.
+     * Listens using microphone.
+     * Converts speech to text using Google’s speech recognition API.
+   * `search_web(query)`:
+
+     * Constructs a Google search URL using the spoken query.
+     * Opens the results in a web browser.
+     * Speaks out the action.
+
+3. **Main Logic**
+
+   ```python
+   if __name__ == "__main__":
+       query = take_command()
+       search_web(query)
+   ```
+
+   * Runs the speech recognition.
+   * If successful, opens a web search for the spoken query.
+
+---
+
+### 🗣️ **Example Flow**
+
+* User runs the script.
+* System says: “What do you want to search for?”
+* User says: “Best Italian restaurants nearby”
+* The browser opens a Google search for that query.
+
+---
+
+### ✅ **Requirements**
+
+You need to install:
+
+```bash
+pip install SpeechRecognition pyttsx3 pyaudio
+```
+
+---
+
+
